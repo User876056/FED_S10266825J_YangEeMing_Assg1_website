@@ -47,8 +47,9 @@ body {
     display: flex; /* Flexbox to align icon and text */
     align-items: center; /* Vertically center icon and text */
     gap: 5px; /* Space between icon and text */
-    font-size: 14px; /* Adjust font size for text */
+    font-size: 17px; /* Adjust font size for text */
     color: #333; /* Set text color to dark gray */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .icon-item img {
@@ -73,7 +74,8 @@ body {
 .nav-links a {
     text-decoration: none; /* Remove underline from links */
     color: #333; /* Set text color to dark gray */
-    font-size: 14px; /* Adjust font size for readability */
+    font-size: 17px; /* Adjust font size for readability */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .nav-links a:hover {
@@ -95,6 +97,7 @@ body {
     border: 1px solid #ccc; /* Add border */
     border-radius: 4px; /* Rounded corners */
     font-size: 14px; /* Adjust font size */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .search-bar input:focus {
@@ -107,8 +110,9 @@ body {
     display: flex; /* Flexbox for horizontal alignment */
     align-items: center; /* Vertically align icon and text */
     gap: 5px; /* Add space between icon and text */
-    font-size: 14px; /* Adjust font size */
-    color: #333; /* Set text color to dark gray */
+    font-size: 17px; /* Adjust font size */
+    color: #3e58ea; /* Set text color to dark gray */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .cart img {
@@ -124,3 +128,26 @@ main {
 }
 
 
+.Promo1{
+    float: left;
+}
+
+.promo2{
+    display:flex wrap;
+}
+
+.promo3{
+    display:flex wrap;
+}
+
+.Flashsale{
+    font-size: 23px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Stocks{
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 50;
+    color: #909090;
+}
