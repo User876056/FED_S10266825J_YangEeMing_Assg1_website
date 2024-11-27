@@ -151,3 +151,25 @@ main {
     font-weight: 50;
     color: #909090;
 }
+
+.Promobox {
+    background-color: #0078d7; /* Blue background */
+    border-radius: 5px; /* Rounded corners */
+    height: 45px; /* Set height */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff; /* White text */
+    margin-top: 10px; /* Spacing from top */
+    text-align: center; /* Horizontal alignment (optional) */
+    display: flex; /* Flexbox container */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+}
+
+.Products{
+    display: inline-block;
+}
+
+.Bg2{
+   background-color: white; 
+   height: 590px
+}
