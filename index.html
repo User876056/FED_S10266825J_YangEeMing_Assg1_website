@@ -3,61 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FairPrice Responsive Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>FairPrice Header</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header class="header">
-        <div class="logo">
-            <img src="R.png" alt="FairPrice Logo">
+        <!-- Top Row: FairPrice Logo and User Actions -->
+        <div class="top-row">
+            <!-- FairPrice Logo -->
+            <div class="logo-container">
+                <img src="fairprice.png" alt="FairPrice Logo">
+            </div>
+
+            <!-- User Actions -->
+            <div class="user-actions">
+                <!-- Login/Sign Up -->
+                <div class="icon-item">
+                    <img src="Profile image.png" alt="Profile">
+                    <span>Login/Sign Up</span>
+                </div>
+                <!-- Help Centre -->
+                <div class="icon-item">
+                    <img src="help.png" alt="Help Centre">
+                    <span>Help Centre</span>
+                </div>
+            </div>
         </div>
-        <div class="search-cart">
-            <input type="text" placeholder="Search for Products">
-            <img src="Screenshot 2024-11-19 111601.png" alt="Cart Icon" class="cart-icon">
+
+        <!-- Bottom Row: Navigation Links and Cart -->
+        <div class="bottom-row">
+            <!-- Navigation Links -->
+            <nav class="nav-links">
+                <a href="#">Categories</a>
+                <a href="#">Promotions</a>
+                <a href="#">Food and Wellness</a>
+                <a href="#">More</a>
+            </nav>
+
+            <!-- Cart -->
+            <div class="cart">
+                <img src="Screenshot 2024-11-19 111601.png" alt="Cart">
+                <span>Cart</span>
+            </div>
         </div>
     </header>
-
-    <section class="banner">
-        <div class="carousel">
-            <img src="banner1.jpg" alt="Banner 1">
-        </div>
-    </section>
-
-    <section class="flash-deals">
-        <h2>Flash Deals</h2>
-        <p>While stocks last!</p>
-        <div class="promo-timer">
-            Promo ends in:
-            <span class="timer">⬤⬤⬤⬤</span>
-        </div>
-        <div class="deals-container">
-            <!-- Product 1 -->
-            <div class="deal">
-                <img src="product1.jpg" alt="Kewpie Mayonnaise">
-                <div class="product-details">
-                    <p class="product-name">Kewpie Mayonnaise 500g</p>
-                    <p class="rating">4.6 ★★★★☆ (66)</p>
-                    <p class="price"><span class="old-price">$7.95</span> $6.90</p>
-                </div>
-                <div class="product-actions">
-                    <button class="add-to-cart">Add to cart</button>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="deal">
-                <img src="product2.jpg" alt="Beef Ribeye Steak">
-                <div class="product-details">
-                    <p class="product-name">Tasty Food Affair Australian Chilled Beef Ribeye Steak 200g</p>
-                    <p class="rating">4.8 ★★★★★</p>
-                    <p class="price">$11.95</p>
-                </div>
-                <div class="product-actions">
-                    <button class="add-to-cart">Add to cart</button>
-                </div>
-            </div>
-        </div>
-    </section>
 </body>
 </html>
-
