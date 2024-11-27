@@ -7,7 +7,7 @@
 
 /* Body background */
 body {
-    background-color: #ffffff; /* White background for the body */
+    background-color: #f0f0f0; /* Light grey for the body */
 }
 
 /* Header Container */
@@ -17,7 +17,10 @@ body {
     gap: 10px; /* Add spacing between rows */
     padding: 10px 20px; /* Add padding around the header */
     border-bottom: 1px solid #ccc; /* Light gray border at the bottom */
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff; /* White background for the header */
+    position: sticky; /* Makes the header sticky (optional) */
+    top: 0; /* Keep it at the top */
+    z-index: 100; /* Ensure it stays above other elements */
 }
 
 /* Top Row: Logo and User Actions */
@@ -77,6 +80,28 @@ body {
     color: #0078d7; /* Add hover effect (blue color) */
 }
 
+/* Search Bar Container */
+.search-bar {
+    flex-grow: 1; /* Make the search bar take up available space */
+    display: flex; /* Align search bar with other elements */
+    justify-content: center; /* Center the search bar horizontally */
+    margin: 0 20px; /* Add horizontal spacing */
+}
+
+.search-bar input {
+    width: 100%; /* Full width within its container */
+    max-width: 300px; /* Limit the width for the search bar */
+    padding: 5px 10px; /* Add some padding for better appearance */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Adjust font size */
+}
+
+.search-bar input:focus {
+    outline: none; /* Remove default outline on focus */
+    border-color: #0078d7; /* Add a blue border on focus */
+}
+
 /* Cart */
 .cart {
     display: flex; /* Flexbox for horizontal alignment */
@@ -90,4 +115,12 @@ body {
     height: 24px; /* Slightly larger cart icon */
     width: auto; /* Maintain aspect ratio */
 }
+
+/* Main Content Section */
+main {
+    padding: 20px; /* Add spacing around the main content */
+    background-color: #f0f0f0; /* Light grey background for the main area */
+    min-height: 100vh; /* Ensure main content takes full screen height */
+}
+
 
