@@ -39,11 +39,24 @@
 
             <!-- Search Bar -->
             <div class="search-bar">
-                <input type="text" placeholder="Search for more">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for more">
+                <ul id="myUL">
+                    <li><a href="filter.html">Rice</a></li>
+                    <li><a href="#">Eggs</a></li>
+                  
+                    <li><a href="#">Bread</a></li>
+                    <li><a href="#">Toilet paper</a></li>
+                  
+                    <li><a href="#">Milk</a></li>
+                    <li><a href="#">Tissue paper</a></li>
+                    <li><a href="#">Magiclean Floor</a></li>
+                  </ul>
             </div>
 
             <div class="cart">
-                <img src="Screenshot 2024-11-19 111601.png" alt="Cart">
+                <a href="cart">
+                    <img src="Screenshot 2024-11-19 111601.png" alt="Cart">
+                </a>
                 <span>Cart</span>
             </div>
         </div>
@@ -61,14 +74,14 @@
         <div class="Promo2">
             <img src="Promo2.png" alt="Second Promotion"
             height="150"
-            width="670"
+            width="610"
             >
         </div>
 
         <div class="Promo3">
             <img src="Promo3.png" alt="Third Promotion"
             height="146"
-            width="670">
+            width="610">
         </div>
 
         <br>
@@ -179,5 +192,8 @@
         </div>
 
     </main>
+
+    <!-- Link to your script -->
+    <script src="script.js"></script>
 </body>
 </html>

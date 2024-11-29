@@ -83,27 +83,53 @@ body {
 }
 
 /* Search Bar Container */
+
+  
+ /* Search Bar Container */
 .search-bar {
-    flex-grow: 1; /* Make the search bar take up available space */
-    display: flex; /* Align search bar with other elements */
-    justify-content: center; /* Center the search bar horizontally */
-    margin: 0 20px; /* Add horizontal spacing */
+    position: relative; /* Position relative for absolute child positioning */
+    width: 250px; /* Set a fixed width for the search bar */
 }
 
 .search-bar input {
-    width: 100%; /* Full width within its container */
-    max-width: 300px; /* Limit the width for the search bar */
-    padding: 5px 10px; /* Add some padding for better appearance */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Adjust font size */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%; /* Input will span the full width of the search-bar container */
+    padding: 8px; /* Add some padding for usability */
+    border: 1px solid #ccc; /* Border for better visibility */
+    border-radius: 4px; /* Rounded edges for better design */
+    font-size: 16px; /* Adjust font size for better readability */
 }
 
-.search-bar input:focus {
-    outline: none; /* Remove default outline on focus */
-    border-color: #0078d7; /* Add a blue border on focus */
+/* Search Results Dropdown */
+#myUL {
+    position: absolute; /* Position relative to the search-bar container */
+    top: 100%; /* Place dropdown just below the input field */
+    left: 0; /* Align with the left edge of the search-bar container */
+    width: 100%; /* Match the width of the search-bar container */
+    max-height: 200px; /* Set a max height to avoid excessive dropdown size */
+    overflow-y: auto; /* Add scrolling if content exceeds max height */
+    border: 1px solid #ccc; /* Border to match input field */
+    border-top: none; /* Remove border overlap with the input field */
+    background-color: #fff; /* White background for dropdown */
+    z-index: 10; /* Ensure dropdown appears above other elements */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
+
+/* Dropdown List Items */
+#myUL li a {
+    display: block; /* Make links take up the full width */
+    padding: 10px; /* Add padding for better clickability */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    border-bottom: 1px solid #f0f0f0; /* Add subtle dividers between items */
+}
+
+#myUL li a:hover {
+    background-color: #f7f7f7; /* Add hover effect */
+}
+
 
 /* Cart */
 .cart {
@@ -130,6 +156,7 @@ main {
 
 .Promo1{
     float: left;
+    margin-left: 25px;
 }
 
 .promo2{
@@ -167,6 +194,7 @@ main {
 
 .Products{
     display: inline-block;
+    margin:6px
 }
 
 .WeeklyPromo{
@@ -183,6 +211,7 @@ main {
 
 .weekly{
     display: inline-block;
+    margin:auto 6px
 }
 
 
