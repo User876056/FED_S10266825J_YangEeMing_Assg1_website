@@ -6,7 +6,6 @@
     <title>FairPrice Header</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <!-- Header Section -->
     <header class="header">
@@ -15,7 +14,6 @@
             <div class="logo-container">
                 <img src="fairprice.png" alt="FairPrice Logo">
             </div>
-
             <div class="user-actions">
                 <div class="icon-item">
                     <img src="Profile image.png" alt="Profile">
@@ -28,7 +26,7 @@
             </div>
         </div>
 
-        <!-- Bottom Row: Navigation Links and Cart -->
+        <!-- Bottom Row: Navigation Links, Search Bar, and Cart -->
         <div class="bottom-row">
             <nav class="nav-links">
                 <a href="#">Categories</a>
@@ -36,12 +34,9 @@
                 <a href="#">Food and Wellness</a>
                 <a href="#">More</a>
             </nav>
-
-            <!-- Search Bar -->
             <div class="search-bar">
                 <input type="text" placeholder="Search for more">
             </div>
-
             <div class="cart">
                 <img src="Screenshot 2024-11-19 111601.png" alt="Cart">
                 <span>Cart</span>
@@ -50,29 +45,42 @@
     </header>
 
     <!-- Main Content -->
-    <main>
-        <section class="product-grid">
-            <!-- Product 1 -->
-            <div class="product-item">
-                <img src="rice1.png" alt="Royal Umbrella Thai Hom Mali Rice">
-                <div class="product-details">
-                    <span class="discount-badge">Save $1</span>
-                    <p class="price">
-                        <span class="current-price">$15.95</span>
-                        <span class="original-price">$16.95</span>
-                    </p>
-                    <p class="product-name">Royal Umbrella Thai Hom Mali Rice</p>
-                    <p class="product-weight">5kg</p>
-                    <div class="ratings">
-                        <span>4.7</span>
-                        <span class="stars">★ ★ ★ ★ ★</span>
-                        <span>(1175)</span>
-                    </div>
-                </div>
+    <main class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show All</button>
+                <button class="btn" onclick="filterSelection('thailand')"> Thailand</button>
+                <button class="btn" onclick="filterSelection('japan')"> Japan</button>
+                <button class="btn" onclick="filterSelection('india')"> India</button>
             </div>
-            <!-- Repeat for other products -->
-        </section>
-    </main>
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="product-grid">
+            <div class="filterDiv thailand show">
+                <img src="ricet1.png" alt="Thai Rice" width="230">
+            </div>
+            <div class="filterDiv japan show">
+                <img src="ricej1.png" alt="Japan Rice" width="230">
+            </div>
+            <div class="filterDiv thailand show">
+                <img src="ricet2.png" alt="Thai Rice" width="230">
+            </div>
+            <div class="filterDiv india show">
+                <img src="ricei2.png" alt="Indian Rice" width="230">
+            </div>
+            <div class="filterDiv thailand show">
+                <img src="ricet3.png" alt="Thai Rice" width="230">
+            </div>
+            <div class="filterDiv india show">
+                <img src="ricei1.png" alt="Indian Rice" width="230">
+            </div>
+        </div>
     
+    
+    </main>
+    <!-- Link to your script -->
+    <script src="script.js"></script>
 </body>
 </html>
