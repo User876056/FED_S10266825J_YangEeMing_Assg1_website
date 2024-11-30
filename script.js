@@ -45,6 +45,8 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 
+
+
 function myFunction() {
     // Declare variables
     var input, filter, ul, li, a, i, txtValue;
@@ -64,3 +66,84 @@ function myFunction() {
       }
     }
   }
+
+
+
+
+  console.log("JavaScript file loaded");
+
+  // Initialize cart from localStorage
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+  // Add to Cart Function
+  function addToCart(name, price, image) {
+      console.log("Adding to cart:", name, price, image);
+  
+      // Check if the item already exists in the cart
+      let existingItem = cart.find(item => item.name === name);
+      if (existingItem) {
+          existingItem.quantity += 1; // Increment quantity
+      } else {
+          cart.push({ name, price, image, quantity: 1 });
+      }
+  
+      localStorage.setItem("cart", JSON.stringify(cart));
+      console.log("Cart updated:", cart);
+  }
+  
+  // Update Cart UI (Cart Page)
+  function updateCartUI() {
+      const cartContentEl = document.getElementById("cart-items");
+      const totalPriceEl = document.getElementById("total-price");
+  
+      if (cartContentEl) {
+          cartContentEl.innerHTML = ""; // Clear existing content
+          let total = 0;
+  
+          cart.forEach((item, index) => {
+              cartContentEl.innerHTML += `
+                  <div class="cart-item">
+                      <img src="${item.image}" alt="${item.name}" class="cart-img">
+                      <div>
+                          <p>${item.name}</p>
+                          <p>$${item.price} x ${item.quantity}</p>
+                      </div>
+                      <button onclick="removeItem(${index})">Remove</button>
+                  </div>
+              `;
+              total += item.price * item.quantity;
+          });
+  
+          if (totalPriceEl) {
+              totalPriceEl.textContent = `Total: $${total.toFixed(2)}`;
+          }
+      }
+  }
+  
+  // Remove Item
+  function removeItem(index) {
+      console.log("Removing item at index:", index);
+      cart.splice(index, 1); // Remove item
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartUI(); // Refresh cart display
+  }
+  
+  // Add Event Listeners (Product Page)
+  const addToCartButtons = document.querySelectorAll(".cart-button");
+  
+  addToCartButtons.forEach(button => {
+      button.addEventListener("click", () => {
+          const productContainer = button.closest(".product-section");
+          const name = productContainer.querySelector(".product-name").textContent;
+          const price = parseFloat(productContainer.querySelector(".current-price").textContent.replace('$', ''));
+          const image = productContainer.querySelector(".main-image img").src;
+  
+          addToCart(name, price, image);
+      });
+  });
+  
+  // Run only on Cart Page
+  if (document.getElementById("cart-items")) {
+      updateCartUI();
+  }
+  

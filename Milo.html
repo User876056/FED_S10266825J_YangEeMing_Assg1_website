@@ -43,20 +43,21 @@
             </div>
 
             <div class="cart">
-                <img src="Screenshot 2024-11-19 111601.png" alt="Cart">
+                <a href="cart.html">
+                    <img src="Screenshot 2024-11-19 111601.png" alt="Cart">
+                </a>
                 <span>Cart</span>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <!-- Main Content -->
+    <!-- Main Content (Product Section) -->
     <main>
         <div class="product-section">
             <!-- Product Image Section -->
             <div class="product-images">
                 <div class="main-image">
-                    <img src="MiloReal.png" alt="Milo Product">
+                    <img id="product-image" src="MiloReal.png" alt="Milo Product">
                 </div>
                 <div class="thumbnails">
                     <img src="MiloReal.png" alt="Thumbnail 1">
@@ -69,11 +70,11 @@
             <div class="product-details">
                 <div class="offer-tag">Offer</div>
                 <div class="price">
-                    <span class="current-price">$7.95</span>
+                    <span id="current-price" class="current-price">$7.95</span>
                     <span class="original-price">$8.95</span>
                 </div>
                 <div class="savings">Save $1.00</div>
-                <div class="product-name">Milo 3 in 1 Instant Chocolate Malt with Milk - Regular</div>
+                <div id="product-name" class="product-name">Milo 3 in 1 Instant Chocolate Malt with Milk - Regular</div>
                 <div class="product-info">
                     16 x 27g | Brand: Milo
                 </div>
@@ -82,9 +83,13 @@
                     <span>⭐⭐⭐⭐☆</span>
                     <span>(300 ratings)</span>
                 </div>
+                <!-- Add to Cart button -->
                 <button class="cart-button">Add to Cart</button>
             </div>
         </div>
     </main>
+
+    <!-- Include the cart JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

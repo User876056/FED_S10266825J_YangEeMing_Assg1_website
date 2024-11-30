@@ -30,10 +30,14 @@ body {
     align-items: center; /* Vertically align items */
 }
 
-/* Logo Section */
+/* Logo Section - Make logo fixed */
 .logo-container img {
     height: 35px; /* Ensure logo height is consistent */
     width: auto; /* Maintain the logo's aspect ratio */
+    position: fixed; /* Fix the logo to the top of the screen */
+    top: 10px; /* Position 10px from top */
+    left: 20px; /* Position 20px from left */
+    z-index: 999; /* Ensure logo stays on top of other content */
 }
 
 /* User Actions (Icons + Text) */
@@ -83,9 +87,6 @@ body {
 }
 
 /* Search Bar Container */
-
-  
- /* Search Bar Container */
 .search-bar {
     position: relative; /* Position relative for absolute child positioning */
     width: 250px; /* Set a fixed width for the search bar */
@@ -117,19 +118,54 @@ body {
 }
 
 /* Dropdown List Items */
+#myUL {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Make it invisible */
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+}
+
+/* Show the dropdown when the input field is focused */
+.search-bar input:focus + #myUL {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out; /* No delay for opacity */
+}
+
+/* Alternatively, show the dropdown when hovering over the search-bar container */
+.search-bar:hover #myUL {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Styling for the list items */
+#myUL li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 #myUL li a {
-    display: block; /* Make links take up the full width */
-    padding: 10px; /* Add padding for better clickability */
-    font-size: 14px; /* Adjust font size */
-    color: #333; /* Text color */
-    text-decoration: none; /* Remove underline from links */
-    border-bottom: 1px solid #f0f0f0; /* Add subtle dividers between items */
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    background-color: transparent;
 }
 
 #myUL li a:hover {
-    background-color: #f7f7f7; /* Add hover effect */
+    background-color: #f1f1f1;
 }
-
 
 /* Cart */
 .cart {
@@ -153,26 +189,22 @@ main {
     min-height: 100vh; /* Ensure main content takes full screen height */
 }
 
-
-.Promo1{
+.Promo1 {
     float: left;
     margin-left: 25px;
 }
 
-.promo2{
-    display:flex wrap;
+.promo2, .promo3 {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap when the screen is smaller */
 }
 
-.promo3{
-    display:flex wrap;
-}
-
-.Flashsale{
+.Flashsale {
     font-size: 23px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.Stocks{
+.Stocks {
     font-size: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 50;
@@ -192,27 +224,71 @@ main {
     align-items: center; /* Vertically center content */
 }
 
-.Products{
+.Products {
     display: inline-block;
-    margin:6px
+    margin: 6px;
 }
 
-.WeeklyPromo{
+.WeeklyPromo {
     font-size: 23px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.Instore{
+.Instore {
     font-size: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 50;
     color: #909090;
 }
 
-.weekly{
+.weekly {
     display: inline-block;
-    margin:auto 6px
+    margin: auto 6px;
 }
+
+/* Media Queries for Mobile Layout */
+@media (max-width: 768px) {
+    .top-row {
+        flex-direction: column; /* Stack logo and user actions vertically */
+    }
+
+    .user-actions {
+        flex-direction: column; /* Stack actions vertically */
+        gap: 10px; /* Adjust spacing between actions */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px; /* Adjust spacing between links */
+    }
+
+    .search-bar {
+        width: 100%; /* Full-width search bar */
+    }
+
+    .cart {
+        flex-direction: column; /* Stack cart icon and text vertically */
+        gap: 10px; /* Adjust spacing */
+    }
+
+    /* Adjust Weekly Promo and Flash Sale Image Layout to 2 Columns */
+    .Promo1, .Promo2, .promo3 {
+        flex: 1 1 calc(50% - 20px); /* Two columns layout */
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Promo1, .Promo2, .promo3 {
+        flex: 1 1 100%; /* Stack all items vertically */
+    }
+    
+    .Products, .weekly {
+        display: block; /* Stack product items vertically */
+        margin: 5px 0; /* Adjust margins */
+    }
+}
+
 
 
 /* Product Section */
@@ -367,4 +443,25 @@ main {
 #myBtnContainer .btn:hover {
     background-color: #005bb5;
     color: #ffffff;
+}
+
+#cart-total {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#checkout-btn {
+    background-color: #0078d7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
