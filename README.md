@@ -27,8 +27,13 @@ Mobile Responsiveness
 Search and Cart Accessibility: The search bar and cart are easily accessible at the top, with a simplified design to suit mobile screens.
 
 
-3. Research & Design Decisions
-
+3. Reference & Design Decisions
+Flash deal , weekly promotions, products and logo are all from https://www.fairprice.com.sg/
+Logos like cart, profile and help are from https://www.figma.com/files/team/1393049877095462553/recents-and-sharing?fuid=1393049874723056780
+Search function from https://www.w3schools.com/howto/howto_js_filter_lists.asp
+FIlter function from https://www.w3schools.com/howto/howto_js_filter_elements.asp
+Atempted cart in https://codepen.io/N4NDH4KUM4R/pen/OJBXxqX
+Some reference to chat gpt https://chatgpt.com/c/6727a454-65dc-8003-9a15-49dd70413622
 
 
 Technical Decisions:
@@ -36,6 +41,3 @@ Technical Decisions:
 Flexbox used for layout management.
 Sticky Header: Implemented to allow users to access navigation and key features without needing to scroll to the top.
 Usage of media queries
-
-
-6. Conclusion
