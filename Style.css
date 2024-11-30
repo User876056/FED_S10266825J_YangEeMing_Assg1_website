@@ -287,6 +287,10 @@ main {
         display: block; /* Stack product items vertically */
         margin: 5px 0; /* Adjust margins */
     }
+    .user-actions{
+        opacity: 0;
+    }
+
 }
 
 
