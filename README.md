@@ -7,8 +7,7 @@ The FairPrice website is designed primarily for individuals who are looking to s
 
 
 Purpose of the Website
-The purpose of this website is to provide an easy-to-use, efficient, and responsive online shopping platform for groceries and household items. Key features include being able to filter through different products, being able to search for whaever proucts consumers are trying to look for, look through all of the different flash deals and info about them as well as 
-
+The purpose of this website is to provide an easy-to-use, efficient, and responsive online shopping platform for groceries and household items. Key features include being able to filter through different products, being able to search for whaever proucts consumers are trying to look for, look through all of the different flash deals and info about them
 
 
 
@@ -36,8 +35,25 @@ Atempted cart in https://codepen.io/N4NDH4KUM4R/pen/OJBXxqX
 Some reference to chat gpt https://chatgpt.com/c/6727a454-65dc-8003-9a15-49dd70413622
 
 
+4. Misc (Failed features)
+Attempt to use json and local storage to update cart was attempted but ultimately failed. Developer tools did not show any input when add to cart was tapped even after
+multiple revisions to javascript even though my html was linked.
+
+ Design is not extremely responsive
+
+5.Misc features
+Hover over buttons change colour to blue for categories, more et using css
+Hover buttons for carts also work suing css
+Search function implmented using javascript from w3school-extra part added by me to hide the box if not being hovered over by using visiblity
+Filter function also implemented using javascript from w3school
+
+
 Technical Decisions:
 
 Flexbox used for layout management.
 Sticky Header: Implemented to allow users to access navigation and key features without needing to scroll to the top.
 Usage of media queries
+
+Wireframe:
+
+https://www.figma.com/design/zH6mmgZeb3MBJXQKzYq1ps/Asg-1-WireFrame?node-id=0-1&t=Zq125Xli1NuCeEiu-1
